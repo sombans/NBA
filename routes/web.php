@@ -28,3 +28,5 @@ Route::post('/login', 'LoginController@store');
 Route::get('/player/{playerId}', ['as' => 'single-player', 'uses' => 'PlayersController@show']);
 
 Route::get('/{id}', ['as' => 'single-team', 'uses' => 'TeamsController@show']);
+
+Route::post('/{teamId}/comments', ['as' => 'comments-team', 'uses' => 'CommentsController@store']);
